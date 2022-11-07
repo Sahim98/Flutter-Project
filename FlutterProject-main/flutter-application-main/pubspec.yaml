@@ -52,6 +52,7 @@ dependencies:
   firebase_database: ^10.0.4
   firebase_storage_web: ^3.3.14
   fluttertoast: ^8.1.1
+  number_paginator: ^0.2.2
 
 dev_dependencies:
   flutter_test:

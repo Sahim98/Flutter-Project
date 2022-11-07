@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Adult.dart';
+import 'package:flutter_application_1/choking-adult.dart';
+import 'package:flutter_application_1/choking-infant.dart';
 
 class Choking extends StatefulWidget {
   const Choking({Key? key}) : super(key: key);
@@ -80,7 +81,10 @@ class _ChokingState extends State<Choking> {
                           style: TextStyle(fontSize: 25),
                         ),
                         onTap: () {
-                          
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Infant()),
+                          );
                         },
                         // style: ListTileStyle(),
                       ),
