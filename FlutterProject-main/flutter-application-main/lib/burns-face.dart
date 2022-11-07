@@ -1,14 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/material.dart';
 
-class Info extends StatefulWidget {
-  const Info({Key? key}) : super(key: key);
+class FaceMouth extends StatefulWidget {
+  const FaceMouth({Key? key}) : super(key: key);
 
   @override
-  State<Info> createState() => _BurningState();
+  State<FaceMouth> createState() => _FaceMouthState();
 }
 
-class _BurningState extends State<Info> {
+class _FaceMouthState extends State<FaceMouth> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class _BurningState extends State<Info> {
           title: AnimatedTextKit(
             animatedTexts: [
               TypewriterAnimatedText(
-                'Important Information',
+                'Face/Mouth',
                 textStyle: const TextStyle(
                   fontSize: 25.0,
                   fontWeight: FontWeight.bold,
@@ -42,32 +42,18 @@ class _BurningState extends State<Info> {
           padding: const EdgeInsets.all(15.0),
           child: new Container(
             child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              //crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 new Expanded(
                   flex: 1,
                   child: new SingleChildScrollView(
                       scrollDirection: Axis.vertical,
                       child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Column(
-                          // ignore: prefer_const_literals_to_create_immutables
                           children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TyperAnimatedText('When treating burns: ',
-                                    speed: Duration(milliseconds: 200),
-                                    textStyle: TextStyle(
-                                        fontSize: 28,
-                                        color: Colors.green,
-                                        fontWeight: FontWeight.bold)),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
                             Text(
-                              '1.\tDo not remove anything that is sticking to the burn.',
+                              '1. Check for danger.',
                               style: TextStyle(
                                 fontSize: 28,
                               ),
@@ -76,7 +62,7 @@ class _BurningState extends State<Info> {
                               height: 20,
                             ),
                             Text(
-                              '2.\tDo not over cool the casualty as there is risk to lowering their body tempurature too much. ',
+                              '2. Dial 999/112 for an ambulance and tell them  you suspect burns  to the airways.',
                               style: TextStyle(
                                 fontSize: 28,
                               ),
@@ -85,7 +71,7 @@ class _BurningState extends State<Info> {
                               height: 20,
                             ),
                             Text(
-                              '3.\tDo not use lotions, ointments or creams',
+                              '3. Maintain the airway, loosening clothing around the casualty\'s neck if needed.',
                               style: TextStyle(
                                 fontSize: 28,
                               ),
@@ -94,7 +80,7 @@ class _BurningState extends State<Info> {
                               height: 20,
                             ),
                             Text(
-                              '4.\tDo not use adhesive dressings.',
+                              '4. Give the casualty ice or sips of cold water to relieve the pain and any swelling.',
                               style: TextStyle(
                                 fontSize: 28,
                               ),
@@ -103,7 +89,7 @@ class _BurningState extends State<Info> {
                               height: 20,
                             ),
                             Text(
-                              '5.\tDo not break blisters.',
+                              '5. Monitor the casualty continuously as any injury may cause deffulty in breathing.',
                               style: TextStyle(
                                 fontSize: 28,
                               ),
@@ -118,4 +104,3 @@ class _BurningState extends State<Info> {
         ));
   }
 }
-

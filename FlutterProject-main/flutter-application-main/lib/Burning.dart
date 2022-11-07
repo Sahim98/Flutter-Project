@@ -1,4 +1,8 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/burning-general_info.dart';
+import 'package:flutter_application_1/burns-chemical.dart';
+import 'package:flutter_application_1/burns-face.dart';
 
 import 'burns_info.dart';
 
@@ -21,8 +25,23 @@ class _BurningState extends State<Burning> {
               Navigator.pop(context);
             },
           ),
-          title: Text('Burns'),
-          //backgroundColor: Colors.blue,
+          title: AnimatedTextKit(
+            animatedTexts: [
+              TypewriterAnimatedText(
+                'Burns',
+                textStyle: const TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                speed: const Duration(milliseconds: 200),
+              ),
+            ],
+            totalRepeatCount: 4,
+            pause: const Duration(milliseconds: 200),
+            displayFullTextOnTap: true,
+            stopPauseOnTap: true,
+          ),
+          //backgroundColor: Colors.blue
         ),
         body: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -77,7 +96,13 @@ class _BurningState extends State<Burning> {
                           'General Information',
                           style: TextStyle(fontSize: 25),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => General_info()),
+                          );
+                        },
                         // style: ListTileStyle(),
                       ),
                     ),
@@ -103,8 +128,13 @@ class _BurningState extends State<Burning> {
                           'Face/Mouth',
                           style: TextStyle(fontSize: 25),
                         ),
-                        onTap: () {},
-                        // style: ListTileStyle(),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FaceMouth()),
+                          );
+                        },
                       ),
                     ),
                   ),
@@ -129,8 +159,14 @@ class _BurningState extends State<Burning> {
                           'Chemical-body/eyes',
                           style: TextStyle(fontSize: 25),
                         ),
-                        onTap: () {},
-                        // style: ListTileStyle(),
+                        onTap: () {
+                           Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Chemical()),
+                          );
+
+                        },
                       ),
                     ),
                   ),

@@ -100,7 +100,6 @@ class _AcidAttackState extends State<AcidAttack> {
                             Text(
                               '6. Use tap or bottled water. Or, wherever possible, use Hartmann’s or Normal Saline solutions.',
                               style: TextStyle(
-                                color: Colors.black,
                                 fontSize: 28,
                               ),
                             ),
