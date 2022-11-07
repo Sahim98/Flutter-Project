@@ -59,56 +59,57 @@ class _InfantState extends State<Infant> {
                           child: Column(
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              Text(
-                                'Never use abdominal thrusts on an infant.',
-                                style: TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 30,
-                                ),
+                              AnimatedTextKit(
+                                animatedTexts: [
+                                  TyperAnimatedText(
+                                      'Never use abdominal thrusts on an infant.',
+                                      speed: Duration(milliseconds: 100),
+                                      textStyle: TextStyle(
+                                          fontSize: 30,
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold)),
+                                ],
                               ),
                               SizedBox(
-                                height: 20,
+                                height: 40,
                               ),
                               Text(
                                 '1. Lay the infant face down on your thigh while supporting their head.\ngive the infant up to five back blows',
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 28,
                                 ),
                               ),
                               SizedBox(
                                 height: 20,
                               ),
                               Text(
-                                '2. Turn the infant over so they are lying on your other thigh and checktheir mouth obious obstructions (donot do a blind finger sweep). If chocking persists, try up to five chest thrusts.',
+                                '\n2. Turn the infant over so they are lying on your other thigh and checktheir mouth obious obstructions (donot do a blind finger sweep). If chocking persists, try up to five chest thrusts.',
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 28,
+                                ),
+                              ),
+                              Text(
+                                '\n\n3. Place two fingers on the breastbone, one finger breath  below the nipple line and push downwards.',
+                                style: TextStyle(
+                                  fontSize: 28,
                                 ),
                               ),
                               SizedBox(
                                 height: 20,
                               ),
                               Text(
-                                '3. Place two fingers on the breastbone, one finger breath  below the nipple line and push downwards.',
+                                '\n4. Check the mouth.\n',
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 28,
                                 ),
                               ),
                               SizedBox(
                                 height: 20,
                               ),
                               Text(
-                                '4. Check the mouth.',
+                                '5. If the obstruction has not cleared, dial 999/112 for emergency help using your mobile phone. Taking the infant with you if necessary.',
                                 style: TextStyle(
-                                  fontSize: 30,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                '5. If the obstruction has not cleared, dial 999/112 for emergency helpusing your mobile phone. Taking the infant with you if necessary.',
-                                style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 28,
                                 ),
                               ),
                             ],

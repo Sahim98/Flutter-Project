@@ -13,18 +13,18 @@ class _BurningState extends State<Burning> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          title: Text('Burns'),
+          //backgroundColor: Colors.blue,
         ),
-        title: Text('Burns'),
-        //backgroundColor: Colors.blue,
-      ),
-      body: Padding(
+        body: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(children: [
               Container(
@@ -58,8 +58,6 @@ class _BurningState extends State<Burning> {
                   ),
                 ),
               ),
-              // style: TextButton.styleFrom(
-              //     alignment: Alignment.center, padding: EdgeInsets.all(100)),
               Container(
                 height: MediaQuery.of(context).size.height / 5,
                 child: Center(
@@ -138,7 +136,6 @@ class _BurningState extends State<Burning> {
                   ),
                 ),
               ),
-            ]))
-    );
+            ])));
   }
 }
