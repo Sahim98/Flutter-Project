@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/choking-adult.dart';
 import 'package:flutter_application_1/choking-infant.dart';
+import 'package:flutter_application_1/choking-video.dart';
 
 class Choking extends StatefulWidget {
   const Choking({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _ChokingState extends State<Choking> {
             padding: const EdgeInsets.all(8.0),
             child: Column(children: [
               Container(
-                height: MediaQuery.of(context).size.height / 3,
+                height: MediaQuery.of(context).size.height / 4,
                 child: Center(
                   child: Container(
                     height: 100,
@@ -62,7 +63,7 @@ class _ChokingState extends State<Choking> {
               // style: TextButton.styleFrom(
               //     alignment: Alignment.center, padding: EdgeInsets.all(100)),
               Container(
-                height: MediaQuery.of(context).size.height / 3,
+                height: MediaQuery.of(context).size.height / 4,
                 child: Center(
                   child: Container(
                     height: 100,
@@ -84,6 +85,37 @@ class _ChokingState extends State<Choking> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => Infant()),
+                          );
+                        },
+                        // style: ListTileStyle(),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 4,
+                child: Center(
+                  child: Container(
+                    height: 100,
+                    child: Card(
+                      elevation: 10,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.info_outline,
+                          color: Colors.teal,
+                        ),
+                        title: Text(
+                          'Watch Video',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Choke_vid()),
                           );
                         },
                         // style: ListTileStyle(),

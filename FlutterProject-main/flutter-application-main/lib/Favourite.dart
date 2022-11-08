@@ -139,7 +139,7 @@ class _notificationState extends State<notification> {
                 );
               },
               child: Icon(Icons.add_call),
-              backgroundColor: Colors.greenAccent,
+              backgroundColor: Colors.blue,
             ),
           ),
           FloatingActionButton(

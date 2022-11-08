@@ -91,6 +91,22 @@ class _situationState extends State<situation> {
             iconColor: Colors.teal,
             leading: Icon(Icons.medical_services),
             title: Text(
+              'Earthquake',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            ),
+            //subtitle: Text('Tap to view'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Stroke()),
+              );
+            },
+          ),
+          ListTile(
+            iconColor: Colors.teal,
+            leading: Icon(Icons.medical_services),
+            title: Text(
               'Stroke',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),

@@ -98,7 +98,7 @@ class _InfantState extends State<Infant> {
                                 height: 20,
                               ),
                               Text(
-                                '\n4. Check the mouth.\n',
+                                '\n4. Check the mouth of victim.\n',
                                 style: TextStyle(
                                   fontSize: 28,
                                 ),
