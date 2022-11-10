@@ -4,6 +4,7 @@ import 'package:flutter_application_1/Burning.dart';
 import 'package:flutter_application_1/Choking.dart';
 import 'package:flutter_application_1/HeadInjury.dart';
 import 'package:flutter_application_1/Stroke.dart';
+import 'package:flutter_application_1/earthquake.dart';
 
 class situation extends StatefulWidget {
   const situation({Key? key}) : super(key: key);
@@ -99,7 +100,7 @@ class _situationState extends State<situation> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Stroke()),
+                MaterialPageRoute(builder: (context) => Earthquake()),
               );
             },
           ),

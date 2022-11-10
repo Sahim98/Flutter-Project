@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/burning-general_info.dart';
 import 'package:flutter_application_1/burns-chemical.dart';
 import 'package:flutter_application_1/burns-face.dart';
+import 'package:flutter_application_1/burns-vid.dart';
 
 import 'burns_info.dart';
 
@@ -47,7 +48,7 @@ class _BurningState extends State<Burning> {
             padding: const EdgeInsets.all(8.0),
             child: Column(children: [
               Container(
-                height: MediaQuery.of(context).size.height / 5,
+                height: MediaQuery.of(context).size.height / 6,
                 child: Center(
                   child: Container(
                     height: 100,
@@ -63,7 +64,7 @@ class _BurningState extends State<Burning> {
                         ),
                         title: Text(
                           'Important Information',
-                          style: TextStyle(fontSize: 25),
+                          style: TextStyle(fontSize: 26),
                         ),
                         onTap: () {
                           Navigator.push(
@@ -78,7 +79,7 @@ class _BurningState extends State<Burning> {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 5,
+                height: MediaQuery.of(context).size.height / 6,
                 child: Center(
                   child: Container(
                     height: 100,
@@ -110,7 +111,7 @@ class _BurningState extends State<Burning> {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 5,
+                height: MediaQuery.of(context).size.height / 6,
                 child: Center(
                   child: Container(
                     height: 100,
@@ -141,7 +142,7 @@ class _BurningState extends State<Burning> {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 5,
+                height: MediaQuery.of(context).size.height / 6,
                 child: Center(
                   child: Container(
                     height: 100,
@@ -160,12 +161,40 @@ class _BurningState extends State<Burning> {
                           style: TextStyle(fontSize: 25),
                         ),
                         onTap: () {
-                           Navigator.push(
+                          Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => Chemical()),
+                            MaterialPageRoute(builder: (context) => Chemical()),
                           );
-
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 6,
+                child: Center(
+                  child: Container(
+                    height: 100,
+                    child: Card(
+                      elevation: 10,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.info_outline,
+                          color: Colors.teal,
+                        ),
+                        title: Text(
+                          'Burns-video',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => burn_vid()),
+                          );
                         },
                       ),
                     ),

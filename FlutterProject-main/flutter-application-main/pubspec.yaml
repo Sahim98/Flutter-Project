@@ -54,6 +54,7 @@ dependencies:
   fluttertoast: ^8.1.1
   number_paginator: ^0.2.2
   video_player: ^2.4.7
+  tflite: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -83,6 +84,12 @@ flutter:
      - lib/Image/fire.png
      - lib/Image/police.png
      - lib/videos/choking.mp4
+     - lib/videos/aa.mp4
+     - lib/videos/Burns.mp4
+     - lib/videos/head injury.mp4
+     - lib/videos/STROKE FIRST-AID.mp4
+     - lib/videos/Heart attack.mp4
+
 
    # - images/a_dot_ham.jpeg
 
