@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/AcidAttack.dart';
-import 'package:flutter_application_1/Burning.dart';
-import 'package:flutter_application_1/Choking.dart';
-import 'package:flutter_application_1/HeadInjury.dart';
-import 'package:flutter_application_1/Stroke.dart';
-import 'package:flutter_application_1/earthquake.dart';
+import 'package:flutter_application_1/subcategory.dart';
+import 'package:flutter_application_1/tutorialoption.dart';
 
-class situation extends StatefulWidget {
-  const situation({Key? key}) : super(key: key);
+class Situation extends StatefulWidget {
+  const Situation({Key? key}) : super(key: key);
 
   @override
-  State<situation> createState() => _situationState();
+  State<Situation> createState() => _SituationState();
 }
 
-class _situationState extends State<situation> {
+class _SituationState extends State<Situation> {
+  String ViewSituation(int stIndex) {
+    if (stIndex == 0)
+      return "Choking";
+    else if (stIndex == 1)
+      return "Acid Attack";
+    else if (stIndex == 2)
+      return "Burns";
+    else if (stIndex == 3)
+      return "Earthquake";
+    else
+      return "Drowning";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,102 +33,27 @@ class _situationState extends State<situation> {
       body: Container(
           child: ListView(
         children: [
-          ListTile(
-            iconColor: Colors.teal,
-            leading: Icon(Icons.medical_services),
-            title: Text(
-              'Choking',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          for (int i = 0; i < 5; i++)
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 6,
+              child: ListTile(
+                iconColor: Colors.teal,
+                leading: Icon(Icons.medical_services),
+                title: Text(
+                  ViewSituation(i),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                //subtitle: Text('Tap to view'),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Subcategory(ViewSituation(i))),
+                  );
+                },
+              ),
             ),
-            //subtitle: Text('Tap to view'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Choking()),
-              );
-            },
-          ),
-          ListTile(
-            iconColor: Colors.teal,
-            leading: Icon(Icons.medical_services),
-            title: Text(
-              'Acid Attack',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            //subtitle: Text('Tap to view'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AcidAttack()),
-              );
-            },
-          ),
-          ListTile(
-            iconColor: Colors.teal,
-            leading: Icon(Icons.medical_services),
-            title: Text(
-              'Burns',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            //subtitle: Text('Tap to view'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Burning()),
-              );
-            },
-          ),
-          ListTile(
-            iconColor: Colors.teal,
-            leading: Icon(Icons.medical_services),
-            title: Text(
-              'Head Injury',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            //subtitle: Text('Tap to view'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HeadInjury()),
-              );
-            },
-          ),
-          ListTile(
-            iconColor: Colors.teal,
-            leading: Icon(Icons.medical_services),
-            title: Text(
-              'Earthquake',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            //subtitle: Text('Tap to view'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Earthquake()),
-              );
-            },
-          ),
-          ListTile(
-            iconColor: Colors.teal,
-            leading: Icon(Icons.medical_services),
-            title: Text(
-              'Stroke',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-            ),
-            //subtitle: Text('Tap to view'),
-            trailing: Icon(Icons.keyboard_arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Stroke()),
-              );
-            },
-          ),
         ],
       )),
     );

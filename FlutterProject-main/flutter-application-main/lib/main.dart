@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/AcidAttack.dart';
-import 'package:flutter_application_1/Burning.dart';
-import 'package:flutter_application_1/Choking.dart';
 import 'package:flutter_application_1/Favourite.dart';
 import 'package:flutter_application_1/HeadInjury.dart';
 import 'package:flutter_application_1/Helpline.dart';
@@ -27,7 +24,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int curr = 0;
-  List ls = [situation(), map(), Helpline(), notification()];
+  List ls = [Situation(), map(), Helpline(), notification()];
   void onPageChanged(int page) {
     setState(() {
       curr = page;
@@ -37,9 +34,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'Font1',
-      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(

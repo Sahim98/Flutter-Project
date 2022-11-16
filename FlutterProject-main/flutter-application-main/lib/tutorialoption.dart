@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/choking-adult.dart';
-import 'package:flutter_application_1/choking-infant.dart';
-import 'package:flutter_application_1/choking-video.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter_application_1/textual.dart';
+import 'package:flutter_application_1/video.dart';
 
-class Choking extends StatefulWidget {
-  const Choking({Key? key}) : super(key: key);
+class TutorialOption extends StatefulWidget {
+  final String situationName, category;
+  const TutorialOption(this.situationName, this.category);
 
   @override
-  State<Choking> createState() => _ChokingState();
+  State<TutorialOption> createState() => _TutorialOptionState();
 }
 
-class _ChokingState extends State<Choking> {
+class _TutorialOptionState extends State<TutorialOption> {
+  String OptionName(int index) {
+    if (index == 0)
+      return "Textual";
+    else
+      return "Video";
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,17 +36,32 @@ class _ChokingState extends State<Choking> {
               Navigator.pop(context);
             },
           ),
-          title: Text('Choking'),
+          title: AnimatedTextKit(
+            animatedTexts: [
+              TypewriterAnimatedText(
+                '${widget.category}',
+                textStyle: const TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                speed: const Duration(milliseconds: 200),
+              ),
+            ],
+            totalRepeatCount: 4,
+            pause: const Duration(milliseconds: 200),
+            displayFullTextOnTap: true,
+            stopPauseOnTap: true,
+          ),
           //backgroundColor: Colors.blue,
         ),
         body: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.fromLTRB(15.0, 15.0, 10.0, 15.0),
             child: Column(children: [
               Container(
-                height: MediaQuery.of(context).size.height / 4,
+                height: MediaQuery.of(context).size.height / 2.7,
                 child: Center(
                   child: Container(
-                    height: 100,
+                    height: 200,
                     child: Card(
                       elevation: 10,
                       shape: RoundedRectangleBorder(
@@ -45,46 +73,16 @@ class _ChokingState extends State<Choking> {
                           color: Colors.teal,
                         ),
                         title: Text(
-                          'Adult/Child',
+                          "Textual",
                           style: TextStyle(fontSize: 25),
                         ),
+
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Adult()),
-                          );
-                        },
-                        // style: ListTileStyle(),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              // style: TextButton.styleFrom(
-              //     alignment: Alignment.center, padding: EdgeInsets.all(100)),
-              Container(
-                height: MediaQuery.of(context).size.height / 4,
-                child: Center(
-                  child: Container(
-                    height: 100,
-                    child: Card(
-                      elevation: 10,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: ListTile(
-                        leading: Icon(
-                          Icons.info_outline,
-                          color: Colors.teal,
-                        ),
-                        title: Text(
-                          'Infant',
-                          style: TextStyle(fontSize: 25),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Infant()),
+                            MaterialPageRoute(
+                                builder: (context) => Textual(
+                                    widget.situationName, widget.category)),
                           );
                         },
                         // style: ListTileStyle(),
@@ -94,10 +92,10 @@ class _ChokingState extends State<Choking> {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 4,
+                height: MediaQuery.of(context).size.height / 2.7,
                 child: Center(
                   child: Container(
-                    height: 100,
+                    height: 200,
                     child: Card(
                       elevation: 10,
                       shape: RoundedRectangleBorder(
@@ -113,10 +111,9 @@ class _ChokingState extends State<Choking> {
                           style: TextStyle(fontSize: 25),
                         ),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Choke_vid()),
-                          );
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => Video(
+                                  widget.situationName, widget.category)));
                         },
                         // style: ListTileStyle(),
                       ),
