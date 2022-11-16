@@ -179,7 +179,7 @@ class _TextualState extends State<Textual> {
         ),
       );
     } else if (stName == "Acid Attack") {
-      Padding(
+      return Padding(
           padding: const EdgeInsets.all(8.0),
           child: new Container(
             child: new Column(
