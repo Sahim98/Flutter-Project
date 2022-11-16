@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Favourite.dart';
-import 'package:flutter_application_1/HeadInjury.dart';
 import 'package:flutter_application_1/Helpline.dart';
 import 'package:flutter_application_1/Home.dart';
 import 'package:flutter_application_1/Map.dart';
-import 'package:flutter_application_1/Stroke.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'Profile.dart';

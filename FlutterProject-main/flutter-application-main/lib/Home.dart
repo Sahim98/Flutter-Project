@@ -10,18 +10,8 @@ class Situation extends StatefulWidget {
 }
 
 class _SituationState extends State<Situation> {
-  String ViewSituation(int stIndex) {
-    if (stIndex == 0)
-      return "Choking";
-    else if (stIndex == 1)
-      return "Acid Attack";
-    else if (stIndex == 2)
-      return "Burns";
-    else if (stIndex == 3)
-      return "Earthquake";
-    else
-      return "Drowning";
-  }
+  List ViewSituation = ["Choking", "Acid Attack","Burns","Earthquake", "Head Injury","Stroke"];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -33,14 +23,14 @@ class _SituationState extends State<Situation> {
       body: Container(
           child: ListView(
         children: [
-          for (int i = 0; i < 5; i++)
+          for (int i = 0; i < ViewSituation.length; i++)
             SizedBox(
-              height: MediaQuery.of(context).size.height / 6,
+              height: MediaQuery.of(context).size.height / (ViewSituation.length+2),
               child: ListTile(
                 iconColor: Colors.teal,
                 leading: Icon(Icons.medical_services),
                 title: Text(
-                  ViewSituation(i),
+                  ViewSituation[i],
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
                 //subtitle: Text('Tap to view'),
@@ -49,7 +39,7 @@ class _SituationState extends State<Situation> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Subcategory(ViewSituation(i))),
+                        builder: (context) => Subcategory(ViewSituation[i])),
                   );
                 },
               ),

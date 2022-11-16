@@ -18,13 +18,13 @@ class _SubcategoryState extends State<Subcategory> {
     else if (stName == "Acid Attack")
       return 1;
     else if (stName == "Burns")
-      return 2;
+      return 3;
     else if (stName == "Head Injury")
-      return 2;
+      return 3;
     else if (stName == "Earthquake")
       return 3;
     else if (stName == "Stroke")
-      return 2;
+      return 3;
     else
       return 3;
   }
@@ -36,11 +36,12 @@ class _SubcategoryState extends State<Subcategory> {
     else if (stName == "Acid Attack")
       SubcategoryNameList = ["Tap for First Aid"];
     else if (stName == "Burns")
-      SubcategoryNameList = ["info" ,"Face", "chemical"];
+      SubcategoryNameList = ["Important Information", "Face/Mouth", "Chemical-body/eyes"];
     else if (stName == "Earthquake")
-      SubcategoryNameList = ["Indore", "Outside", "Driving"];
-    else
-      SubcategoryNameList = ["Adult", "Child", "Infant"];
+      SubcategoryNameList = ["Indoor", "Outside", "Others"];
+    else if (stName == "Head Injury")
+      SubcategoryNameList = ["General Warning", "Recognition", "Treatment"];
+    else if (stName == "Stroke") SubcategoryNameList = ["Recognition","Responsive","Unresponsive"];
     return SubcategoryNameList[index];
   }
 
