@@ -9,15 +9,12 @@ import 'package:flutter_application_1/Helpline.dart';
 import 'package:flutter_application_1/Home.dart';
 import 'package:flutter_application_1/Map.dart';
 import 'package:flutter_application_1/Stroke.dart';
-import 'package:flutter_application_1/animation.dart';
-import 'package:flutter_application_1/drawer.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'Profile.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
-
-void main(List<String> args)  {
+void main(List<String> args) {
   runApp(MyApp());
 }
 
@@ -40,6 +37,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'font1',
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
                 Icons.location_on,
               ),
               label: 'Map',
-              backgroundColor: Colors.lime,
+              backgroundColor: Color.fromARGB(255, 150, 159, 66),
             ),
             BottomNavigationBarItem(
                 backgroundColor: Colors.purple[300],

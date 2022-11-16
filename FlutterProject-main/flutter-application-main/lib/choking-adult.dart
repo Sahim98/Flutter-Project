@@ -11,6 +11,7 @@ class Adult extends StatefulWidget {
 class _AdultState extends State<Adult> {
   Widget build(BuildContext context) {
     return Scaffold(
+      
         appBar: AppBar(
           backgroundColor: Colors.black,
           leading: IconButton(
@@ -55,9 +56,12 @@ class _AdultState extends State<Adult> {
                             Text(
                               '1. Ask the victim, Are you Choking?',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 28,
-                              ),
+                                  color: Colors.black,
+                                  fontSize: 28,
+                                  
+                                
+                                 
+                                  ),
                             ),
                             SizedBox(
                               height: 20,

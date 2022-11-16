@@ -139,6 +139,7 @@ class _notificationState extends State<notification> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             FloatingActionButton(
+              backgroundColor: Colors.teal,
               onPressed: () {
                 showDialog(
                   context: context,
@@ -215,7 +216,7 @@ class _notificationState extends State<notification> {
                   ),
                 );
               },
-              child: Icon(Icons.add),
+              child: Icon(Icons.add_call),
             ),
             FloatingActionButton(
               backgroundColor: Colors.teal,
@@ -228,8 +229,8 @@ class _notificationState extends State<notification> {
         ),
       ),
       appBar: new AppBar(
-        title: const Text("Call now"),
-        leading: Icon(Icons.call),
+        title: const Text("Multiple Messaging"),
+        leading: Icon(Icons.message_sharp),
         backgroundColor: Colors.teal,
       ),
       body: ListView.builder(itemBuilder: itemBuilder, itemCount: name.length));
