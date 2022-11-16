@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: 'font1',
+        fontFamily: 'Font1',
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(

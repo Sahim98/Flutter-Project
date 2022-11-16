@@ -106,11 +106,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: font1
+    - family: Font1
       fonts:
-        - asset: fonts/Nunito-Italic-VariableFont_wght.ttf
-        - asset: fonts/Nunito-VariableFont_wght.ttf
-          weight: 800
+        - asset: fonts/Nunito/font1.ttf
+        - asset: fonts/Nunito/font1_wght.ttf
+          weight: 100
     
   
 
