@@ -21,15 +21,17 @@ class _VideoState extends State<Video> {
 
   loadVideoPlayer() {
     if (widget.situationName == "Choking")
-      controller = VideoPlayerController.asset('assets/videos/choking.mp4');
+      controller = VideoPlayerController.asset('lib/videos/choking.mp4');
     else if (widget.situationName == "Acid Attack")
-      controller = VideoPlayerController.asset('assets/videos/AcidAttack.mp4');
+      controller = VideoPlayerController.asset('lib/videos/aa.mp4');
     else if (widget.situationName == "Burns")
-      controller = VideoPlayerController.asset('assets/videos/Burns.mp4');
-    else if (widget.situationName == "Earthquake")
-      controller = VideoPlayerController.asset('assets/videos/Earthquake.mp4');
+      controller = VideoPlayerController.asset('lib/videos/Burns.mp4');
+    else if (widget.situationName == "Head Injury")
+      controller = VideoPlayerController.asset('lib/videos/head injury.mp4');
+    else if (widget.situationName == "Stroke")
+      controller = VideoPlayerController.asset('lib/videos/stroke.mp4');
     else
-      controller = VideoPlayerController.asset('assets/videos/Drowning.mp4');
+      controller = VideoPlayerController.asset('lib/videos/stroke.mp4');
 
     controller.addListener(() {
       setState(() {});
@@ -40,7 +42,6 @@ class _VideoState extends State<Video> {
   }
 
   void deactivate() {
-    // Pauses video while navigating to next page.
     controller.pause();
     super.deactivate();
   }

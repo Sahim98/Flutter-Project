@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Textual extends StatefulWidget {
   final String situationName, category;
@@ -76,13 +78,56 @@ class _TextualState extends State<Textual> {
                           SizedBox(
                             height: 20,
                           ),
-                          Text(
-                            '5. If the casualty still choking, dial 999/112 for the emergency services.',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 28,
-                            ),
-                          ),
+                          SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(children: <Widget>[
+                                Text('5. Still choking? Dial ',
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                    )),
+                                RichText(
+                                  text: TextSpan(
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                          text: '112',
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              launch('tel:112');
+                                            },
+                                          style: TextStyle(
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.green,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Text('/',
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                    )),
+                                RichText(
+                                  text: TextSpan(
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                          text: '999',
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              launch('tel:999');
+                                            },
+                                          style: TextStyle(
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.green,
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                                Text(' for the emergency servies.',
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                    ))
+                              ])),
                           SizedBox(
                             height: 20,
                           ),
@@ -277,7 +322,7 @@ class _TextualState extends State<Textual> {
                       child: Column(
                         children: [
                           Text(
-                            '1. Check for danger.',
+                            '1. Check for danger',
                             style: TextStyle(
                               fontSize: 28,
                             ),
@@ -993,12 +1038,56 @@ class _TextualState extends State<Textual> {
                         SizedBox(
                           height: 20,
                         ),
-                        Text(
-                          '2. Dial 999/112 for the emergency services.',
-                          style: TextStyle(
-                            fontSize: 28,
-                          ),
-                        ),
+                        SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(children: <Widget>[
+                              Text('2.Dial ',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  )),
+                              RichText(
+                                text: TextSpan(
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                        text: '112',
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            launch('tel:112');
+                                          },
+                                        style: TextStyle(
+                                          fontSize: 28,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.green,
+                                        )),
+                                  ],
+                                ),
+                              ),
+                              Text('/',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  )),
+                              RichText(
+                                text: TextSpan(
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                        text: '999',
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            launch('tel:999');
+                                          },
+                                        style: TextStyle(
+                                          fontSize: 28,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.green,
+                                        )),
+                                  ],
+                                ),
+                              ),
+                              Text(' for the emergency servies.',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ))
+                            ])),
                         SizedBox(
                           height: 20,
                         ),
