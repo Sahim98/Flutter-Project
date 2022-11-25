@@ -76,33 +76,13 @@ class _TfliteHomeState extends State<TfliteHome> {
   File? imgFile;
   final imgPicker = ImagePicker();
 
-  
-
   Future openGallery() async {
     var imgGallery = await imgPicker.getImage(source: ImageSource.gallery);
     setState(() {
       imgFile = File(imgGallery!.path);
     });
     predictImage(imgFile);
-    //Navigator.of(context).pop();
   }
-
- 
-
-  // File? image;
-
-  // final _picker = ImagePicker();
-  // // Implementing the image picker
-  // Future<void> selectFromImagePicker() async {
-  //   final XFile? pickedImage =
-  //   await _picker.pickImage(source: ImageSource.gallery);
-  //   if (pickedImage != null) {
-  //     setState(() {
-  //       image = File(pickedImage.path);
-  //     });
-  //     predictImage(pickedImage as File);
-  //   }
-  // }
 
   predictImage(File? image) async {
     if (image == null) return;
