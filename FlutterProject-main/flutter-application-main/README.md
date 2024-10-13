@@ -1,30 +1,46 @@
-## **Flutter_application_1**
 
-_A Flutter project as a part of software engineering course._
+# **Project Name**
 
-## Getting Started
+### *Emergency Helping Assistant*
 
-This project is a starting point for a Flutter application.
+A Flutter project as a part of software engineering course.
 
-A few resources to get you started if this is your first Flutter project:
+# 🚀 Flutter Project Setup
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+✅ Flutter SDK installed
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+✅ Android Studio or VS Code with Flutter and Dart plugins
 
-### **Project Name:**
+✅ Git installed
 
-*Emergency Helping Assistant*
+✅ A connected device (Android/iOS) or an emulator
 
-## Technology used:
+## Run Flutter doctor
 
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-</div>
+The "flutter doctor" command validates that all components of a complete Flutter development environment for Windows. To verify your installation of all the elements, run the following command:
 
+``PS C:> flutter doctor`` 
+
+## Install Dependencies
+Run the following command to install the required dependencies:
+``flutter pub get``
+
+## Run the Project
+For Android/iOS Emulator:
+Make sure android emulator is running, then use:
+``flutter run``
+
+Build APK (for Android)
+To generate a release APK:
+```flutter build apk --release```
+
+
+
+
+
+## Technology used
 
 <div id="badges" align = "center">
   <a href="https://flutter.dev/?gclid=Cj0KCQjwidSWBhDdARIsAIoTVb1hFezjDm0JJtHWNxz4pIUygGkz3Y5muVXzJwC9MNA7lUVN-xqDlNsaAmOyEALw_wcB&gclsrc=aw.ds">
@@ -35,7 +51,7 @@ samples, guidance on mobile development, and a full API reference.
   </a>
 </div>
 
-## Features:
+## Features
 - *Map*
 - *Multiple Messaging System*
 - *HelpLine Services*
@@ -48,16 +64,7 @@ samples, guidance on mobile development, and a full API reference.
   <img src="https://media.giphy.com/media/iTWomlMFQXIA5DN0VZ/giphy.gif" width="200"/>
 </div>
 
-<h1>
-  hey there
-  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
-</h1>
 
-Some basic Git commands are:
-```
-git add .
-git commit -m "text is needed"
-git push
-```
+
 
 
